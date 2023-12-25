@@ -40,13 +40,9 @@ pipenv install openai
 
 ```
 
-- Create you private API keys 
+- Create your private API keys 
 - https://platform.openai.com/api-keys
-- OPENAI_API_KEY
-- MyTestKey202312
-- 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
-
-export OPENAI_API_KEY=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
+- export OPENAI_API_KEY=<the key from openai>
 
 # Rough 
 
