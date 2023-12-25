@@ -15,3 +15,53 @@ remote: Counting objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (3/3), done.
 ```
+
+- Choose your coding language of choice. 
+- I am choosing Python for this. 
+- Do it again for the 3.12 version please. 
+
+```
+kaunjovi@devbook openai % python --version 
+Python 3.10.2
+kaunjovi@devbook openai % pipenv --version 
+pipenv, version 2023.11.15
+```
+
+- Use pipenv to get run latest python. Dont touch the default of mac. 
+- *Manually create a .venv folder*. Else the dependencies will not be local. 
+
+
+```
+kaunjovi@devbook openai % pipenv install --python 3.12
+kaunjovi@devbook openai % pipenv shell 
+(openai) kaunjovi@devbook openai % python --version 
+Python 3.12.1
+pipenv install openai
+
+```
+
+- Create you private API keys 
+- https://platform.openai.com/api-keys
+- OPENAI_API_KEY
+- MyTestKey202312
+- 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
+
+export OPENAI_API_KEY=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
+
+# Rough 
+
+- Some useful commands with pipenv 
+
+```
+pipenv shell 
+pipenv install 
+pipenv uninstall 
+install --dev autopep8
+uninstall django
+pipenv --rm
+```
+
+- New APIs. https://cookbook.openai.com/
+- [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication)
+
+
