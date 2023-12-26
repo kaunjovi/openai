@@ -63,14 +63,40 @@ pipenv --rm
 
 # Python Poetry 
 
+
+The word “poetry” itself comes from the Greek word poieo meaning “I create,”
+
+poetry --version
+
 Start a new Python Project.
-poetry new [package-name]	
+poetry new [package-name]
+poetry new phone-number-validator
+
+TOML files (What are TOML format??)
+
+Which Python is poetry using?
+Poetry by default just uses the system Python, even if that is not supported by the version specifier in pyproject. toml. 
+Oops. Check this out propoerly. 
+
+Which python to use 
+poetry env use /full/path/to/python
+poetry env use /usr/local/bin/python3.11
+
+The virtualenv will be created inside the project path and vscode will recognize.
+poetry config virtualenvs.in-project true
+
+Shows the name of the current environment
+poetry env list  
+
+remove <current environment>
+poetry env 
+
+will create a new environment using your updated configuration
+Install the packages inside the pyproject.toml file.
+poetry install  
 
 Create a pyproject.toml file interactively.
 poetry init	
-
-Install the packages inside the pyproject.toml file.
-poetry install	
 
 Adding dependencies
 poetry add pendulum
@@ -112,12 +138,23 @@ Integrate with vscode
 $ poetry shell
 $ code .
 and follow https://www.pythoncheatsheet.org/blog/python-projects-with-poetry-and-vscode-part-2
+https://marketplace.visualstudio.com/items?itemName=zeshuaro.vscode-python-poetry
 
+virtual environment
+If not set explicitly, poetry by default will create a virtual environment under {cache-dir}/virtualenvs or use the {project-dir}/. venv directory if one already exists. If set to true , the virtualenv will be created and expected in a folder named . venv within the root directory of the project.
+
+
+
+The poetry.lock file
+The file poetry.lock serves as a record of all the exact versions of the dependencies used in a project during installation, removal, or updating of any dependency. It ensures that your project uses the correct versions of dependencies by listing all the packages, their exact versions, and the hashes of their source files.
+It's important to commit the poetry.lock file to your version control 
 
 
 ## resources 
 - https://python-poetry.org/
 - https://www.pythoncheatsheet.org/blog/python-projects-with-poetry-and-vscode-part-1
 - https://www.pythoncheatsheet.org/blog/python-projects-with-poetry-and-vscode-part-2
+- https://www.freecodecamp.org/news/how-to-build-and-publish-python-packages-with-poetry/
+
 
 
